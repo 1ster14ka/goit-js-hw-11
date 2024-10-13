@@ -3,7 +3,11 @@ import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
 import { fetchImages } from './js/pixabay-api.js';
-import { renderImages, showLoading, hideLoading } from './js/render-functions.js';
+import {
+  renderImages,
+  showLoading,
+  hideLoading,
+} from './js/render-functions.js';
 
 let lightbox = new SimpleLightbox('.list a', {
   captions: true,
@@ -21,7 +25,6 @@ form.addEventListener('submit', event => {
 
   if (userText) {
     showLoading();
-    // let startTime = new Date();
 
     fetchImages(userText)
       .then(data => renderImages(data, lightbox))

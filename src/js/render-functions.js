@@ -20,8 +20,6 @@ export function renderImages(data, lightbox) {
     });
     hideLoading();
   } else {
-    // let endTime = new Date();
-    // let res = endTime - startTime;
     hideLoading();
     const smallImg = data.hits
       .map(
