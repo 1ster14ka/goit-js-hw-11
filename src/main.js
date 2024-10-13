@@ -2,8 +2,8 @@ import SimpleLightbox from 'simplelightbox';
 
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
-import { fetchImages } from './js/pixabay-api';
-import { renderImages, showLoading, hideLoading } from './js/render-functions';
+import { fetchImages } from './js/pixabay-api.js';
+import { renderImages, showLoading, hideLoading } from './js/render-functions.js';
 
 let lightbox = new SimpleLightbox('.list a', {
   captions: true,
