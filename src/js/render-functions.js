@@ -11,14 +11,8 @@ const list = document.querySelector('.list');
 
 export function renderImages(data, lightbox) {
   if (data.total === 0) {
-    iziToast.error({
-      message:
-        'Sorry, there are no images matching your search query. Please try again!',
-      messageSize: 18,
-      messageLineHeight: 30,
-      position: 'topRight',
-    });
-    hideLoading();
+    list.innerHTML = '';
+    return undefined;
   } else {
     hideLoading();
     const smallImg = data.hits
@@ -45,6 +39,7 @@ export function renderImages(data, lightbox) {
     list.innerHTML = smallImg;
 
     lightbox.refresh();
+    return true;
   }
 }
 
